@@ -1,0 +1,52 @@
+1.  CALCULATING A TIP
+------------------------------------
+SET bill = total cost of dinner
+SET tip_percent = percent you wish to tip
+
+DEF Calculate_tip(bill, tip_percent)
+  SET tip_amount = bill * (tip_percent * 0.01)
+  RETURN bill + tip_amount
+END DEF
+
+
+2.  MAKING A PB&J SANDWICH
+------------------------------------
+SEQUENCE
+  retrieve bread_slice * 2
+  retrieve peanut_butter
+  retrieve jelly
+  retrieve knife
+END SEQUENCE
+
+DEF make_sandwich(bread_slice, peanut_butter, jelly, knife)
+  UNTIL bread_slice[1] is covered
+    APPLY peanut_butter TO bread_slice[1] WITH knife
+  END UNTIL
+
+  UNTIL bread_slice[2] is covered
+    APPLY jelly TO bread_slice[2] WITH knife
+  END UNTIL
+
+  RETURN bread_slice[1] + bread_slice[2]
+END DEF
+
+
+
+
+3.  COMB HAIR
+------------------------------------
+retrieve comb
+
+DEF brush_hair(comb, hair)
+  UNTIL comb goes smoothly through hair
+
+    IF hair == knot
+      comb lightly until knot is resolved
+    ELSE
+      comb
+    END IF
+  END UNTIL
+
+  RETURN hair
+  
+END DEF
