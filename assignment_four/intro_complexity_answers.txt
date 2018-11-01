@@ -1,0 +1,69 @@
+Q1:  Describe an analogy for relating an algorithm that has efficiency O(1) and
+another algorithm that has O(2^n).
+
+A1:  An algorithm with an efficiency of O(1) is like a Ferrari while an algorithm with
+a speed of O(2^n) is like an a person walking.
+________________________________________________________________________________
+
+Q2:  In plain English, what is the best case scenario for binary search?
+
+A2:  The best case for binary search would be that the middle element is always
+the element you are looking for making it O(1) or constant time.
+________________________________________________________________________________
+
+Q3:  In plain English, what is the worst-case scenario for binary search?
+
+A3:  The worst case for binary search would be it has to halve the array down to
+one final element which is the element you are looking for making it O(log n) or
+logarithmic time.
+________________________________________________________________________________
+
+Q4:  In plain English, what is the bounded-case scenario for binary search?
+
+A4:  The bounded case for binary search would be an average search time of O(log n)
+or linear time
+________________________________________________________________________________
+
+Q5:  Create a graph using the data below. Here's a CSV with the values you'll need.
+
+A5:  See Link:  https://imgur.com/HGWWvzY
+________________________________________________________________________________
+
+Q6:  What is the limit of the function above as n approaches infinity?
+
+A6:  The limit would be infinity.
+________________________________________________________________________________
+
+Q7:  What is the Big-O of an algorithm that has the data points above?
+
+A7: O(n log n) or log linear time
+________________________________________________________________________________
+
+Q8:  Write a Ruby method that takes a number n. This method must print the
+worst-case number of iterations for linear search to find an item in collections
+of size one to n. Use it to generate a table of worst-case iterations of collections
+up to size 10.
+
+A8:  See Link:  https://repl.it/@ConSou/Ruby-method and https://imgur.com/zgcr1oD
+________________________________________________________________________________
+
+Q9:  Create a graph from the output using Google Sheets or other graphing software.
+Analyze the graph and denote its Big-O somewhere on the graph.
+
+A9:  See Link:  https://imgur.com/IgvLjJs
+________________________________________________________________________________
+
+Q10:  What is the Big-O of binary search?
+
+A10:  O(log n)
+________________________________________________________________________________
+
+Q11:  What is the Big-Ω of binary search?
+
+A11:  Ω(1)
+________________________________________________________________________________
+
+Q12:  What is the Big-Ө of binary search?
+
+A12:  Ө(log n)
+________________________________________________________________________________
