@@ -1,0 +1,151 @@
+Q1:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def goodbye_world(n)
+ puts "Goodbye World! #{n}"
+end
+
+A1:  This algorithm would run in constant time O(1) as no matter the size of n
+there is only one operation needing to be performed.
+________________________________________________________________________________
+
+Q2:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def find_largest(collection)
+ largest = collection[0]
+ collection.length.times do |i|
+   if collection[i] >= largest
+     largest = collection[i]
+   end
+ end
+ largest
+end
+
+A2:  The Big-O of this algorithm would be linear or O(n).  This is because as n
+grows larger the iterations needed to find the largest value grows with n.
+________________________________________________________________________________
+
+Q3:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def find_largest(collection)
+
+ largest = collection[0][0]
+
+ collection.length.times do |i|
+   subcollection = collection[i]
+   subcollection.length.times do |j|
+     if subcollection[j] >= largest
+       largest = subcollection[j]
+     end
+   end
+ end
+ largest
+end
+
+A3:  This algorithm I believe would run in O(n^2).  I believe this because of the
+nested loops.  For each iteration an iteration of the inner array is needed, making
+it n iterations for the outer array and n iterations for the inner array meaning a
+time complexity of O(n * n) or O(N^2).
+________________________________________________________________________________
+
+Q4:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def numbers(n)
+ if (n == 0)
+   return 0
+ elsif (n == 1)
+   return 1
+ else
+   return numbers(n-1) + numbers(n-2)
+ end
+end
+
+A4:  I believe this algorithm would run in linear time O(n).  I think this because
+as n grows the number of recursive calls would grow with it.  All other operations
+are constants and would be dropped as they wouldn't significantly affect time.
+________________________________________________________________________________
+
+Q5:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def iterative(n)
+ num1 = 0
+ num2 = 1
+
+ i = 0
+ while i < n-1
+   tmp = num1 + num2
+   num1 = num2
+   num2 = tmp
+   i+=1
+ end
+
+ num2
+end
+
+A5:  This algorithm's Big-O would be O(n).  As n becomes larger the while loop will
+run longer.  Meaning as n grows the amount of iterations would grow with it.
+________________________________________________________________________________
+
+Q6:  What's the Big-O of the following algorithm? Submit your work and reasoning
+with your solution.
+
+def sort(collection, from=0, to=nil)
+ if to == nil
+   # Sort the whole collection, by default
+   to = collection.count - 1
+ end
+
+ if from >= to
+   # Done sorting
+   return
+ end
+
+ # Take a pivot value, at the far left
+ pivot = collection[from]
+
+ # Min and Max pointers
+ min = from
+ max = to
+
+ # Current free slot
+ free = min
+
+ while min < max
+   if free == min # Evaluate collection[max]
+     if collection[max] <= pivot # Smaller than pivot, must move
+       collection[free] = collection[max]
+       min += 1
+       free = max
+     else
+       max -= 1
+     end
+   elsif free == max # Evaluate collection[min]
+     if collection[min] >= pivot # Bigger than pivot, must move
+       collection[free] = collection[min]
+       max -= 1
+       free = min
+     else
+       min += 1
+     end
+   else
+     raise "Inconsistent state"
+   end
+ end
+
+ collection[free] = pivot
+
+ sort collection, from, free - 1
+ sort collection, free + 1, to
+
+ collection
+end
+
+A6:  I believe this algorithm would run in O(n log n) or loglinear time.  This
+appears to make one pass on the entire array O(n) and then splits the array in two
+parts O(log n) before recursively calling sort. Meaning in total we have O(n * log n)
+or O(n log n) as the time complexity.
+________________________________________________________________________________
