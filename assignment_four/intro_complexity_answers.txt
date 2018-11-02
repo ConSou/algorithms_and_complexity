@@ -20,8 +20,7 @@ ________________________________________________________________________________
 
 Q4:  In plain English, what is the bounded-case scenario for binary search?
 
-A4:  The bounded case for binary search would be an average search time of O(log n)
-or linear time
+A4:  The bounded case for binary search would be Ө(log n).
 ________________________________________________________________________________
 
 Q5:  Create a graph using the data below. Here's a CSV with the values you'll need.
@@ -36,7 +35,7 @@ ________________________________________________________________________________
 
 Q7:  What is the Big-O of an algorithm that has the data points above?
 
-A7: O(n log n) or log linear time
+A7: O(log n) or logarithmic time.
 ________________________________________________________________________________
 
 Q8:  Write a Ruby method that takes a number n. This method must print the
@@ -44,7 +43,8 @@ worst-case number of iterations for linear search to find an item in collections
 of size one to n. Use it to generate a table of worst-case iterations of collections
 up to size 10.
 
-A8:  See Link:  https://repl.it/@ConSou/Ruby-method and https://imgur.com/zgcr1oD
+A8:  See Links:  https://repl.it/@ConSou/Ruby-method
+                 https://imgur.com/zgcr1oD
 ________________________________________________________________________________
 
 Q9:  Create a graph from the output using Google Sheets or other graphing software.
