@@ -63,9 +63,8 @@ def numbers(n)
  end
 end
 
-A4:  I believe this algorithm would run in linear time O(n).  I think this because
-as n grows the number of recursive calls would grow with it.  All other operations
-are constants and would be dropped as they wouldn't significantly affect time.
+A4:  I believe this algorithm would run in exponential time O(n^2).  I think this because
+each call to numbers when n > 1 results in 2 more recursive calls.  
 ________________________________________________________________________________
 
 Q5:  What's the Big-O of the following algorithm? Submit your work and reasoning
