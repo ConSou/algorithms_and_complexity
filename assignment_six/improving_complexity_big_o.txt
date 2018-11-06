@@ -1,0 +1,28 @@
+1.  improving_complexity_version_one (code optimizations).
+
+  For this first version of improving complexity I made a couple of small
+optimizations.  To begin I used the pop method to set combined_array to the last
+array in *arrays this will mean one less array to loop through.  This alone will
+not result in a change of the algorithm's big-O time complexity and the first part
+of the algorithm using a nested loop to create a single array will still run in O(n^2).
+  Following this another optimization I made was using the pop method again rather
+then the delete_at method.  This requires one less call to sorted_array's .length
+method.  This will also not affect the Big-O time complexity of the insertion sort
+which would run in 0(n^2).
+
+2. improving_complexity_version_two (time complexity).
+
+  For this next version I have made improvements to alter the time complexity of
+the original algorithm.  My first change is to use ruby's .flatten method on *arrays.
+After doing some research I found that .flatten runs in O(n) since we are visiting
+every element of the array only once.  This is an improvement from the nested loop
+previously running in O(n^2) time.  The second change I made is to use a different
+sorting algorithm.  I made the decision to use merge sort as it runs in O(n log n)
+which is an improvement over insertion sort at O(n^2).
+
+3.  improving_complexity_version_three (space complexity)
+
+  For this final improvement I was focused on improving space complexity.  For this
+I used the flatten method in order to only create one array where the previous algorithm
+utilized two.  I then used bubble sort to sort the array in place.  Meaning the
+space complexity would be constant O(1).
