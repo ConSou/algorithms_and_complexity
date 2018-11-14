@@ -1,20 +1,21 @@
 class City
-attr_accessor :name, :closest_cities, :visited
+attr_accessor :name, :closest_cities, :visited, :coords
 @@count = 0
+@@all_cities = []
 
-  def initialize(name)
+  def initialize(name, lat, long)
     @name = name
     @visited = false
-    @closest_cities = nil
-
+    @coords = [lat, long]
     @@count += 1
+    @@all_cities.push(self)
   end
 
   def self.count()
     @@count
   end
 
-  def add_closest_cities(array)
-    @closest_cities = array
+  def self.all_cities()
+    @@all_cities
   end
 end
